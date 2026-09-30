@@ -1,19 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package recursividad;
-
-/**
- *
- */
 public class Recursividad {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public static int factorial(int n) {
+if (n <= 1)
+return 1;
+return n * factorial(n - 1);
+}
+public static int fibonacci(int n) {
+if (n <= 1)
+return n;
+return fibonacci(n - 1) + fibonacci(n - 2);
+}
+public static int sumaNaturales(int n) {
+if (n == 0)
+return 0;
+return n + sumaNaturales(n - 1);
+}
+public static void main(String[] args) {
+System.out.println("Factorial de 5: " + factorial(5));
+System.out.println("Fibonacci de 6: " + fibonacci(6));
+System.out.println("Suma hasta 5: " + sumaNaturales(5));
+}
 }
